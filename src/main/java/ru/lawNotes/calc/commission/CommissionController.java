@@ -2,7 +2,6 @@ package ru.lawNotes.calc.commission;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.lawNotes.calc.commission.models.CommissionModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +13,7 @@ import java.text.DecimalFormat;
 
 @Controller
 @RequestMapping("/commission")
-public class Commission {
+public class CommissionController {
     private String title = "Расчёт услуг";
     private String description = "Расчёт раздела услуг между агентом, юристом и агентством, " +
             "с описанием суммы и процента причитающегося каждому из них";

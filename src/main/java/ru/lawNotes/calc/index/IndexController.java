@@ -1,4 +1,4 @@
-package ru.lawNotes.calc;
+package ru.lawNotes.calc.index;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class Main {
+public class IndexController {
     private String title = "Калькуляторы по недвижимости для агентов и юристов";
     private String description = "Считаем различные значения для агентов и юристов";
 

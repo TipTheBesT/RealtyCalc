@@ -6,16 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ru.lawNotes.calc.fraction.Fraction;
+import ru.lawNotes.calc.global.fraction.Fraction;
 import ru.lawNotes.calc.motherCapital.models.MotherCapitalModel;
 import ru.lawNotes.calc.motherCapital.models.MotherCapitalModelResult;
-import ru.lawNotes.calc.parts.models.PartModel;
 
 import java.text.DecimalFormat;
 
 @Controller
 @RequestMapping("/motherCapital")
-public class MotherCapital {
+public class MotherCapitalController {
 
     private String title = "Расчёт долей при приобретении за материнский капитал";
     private String description = "Расчёт минимальных долей для каждого члена семьи при приобретении объекта недвижимости с использованием средств материнского (семейного) капитала.";

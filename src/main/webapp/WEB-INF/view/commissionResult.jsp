@@ -9,18 +9,36 @@
 <!-- Content -->
 <div id="content">
     <section class="last">
-        <h2>Результат расчётов</h2>
-        <p>
-            <b>Введенные данные:</b></br>
-            Сумма услуг: ${commissionResultModel.price} руб. </br>
-            Процент агента: ${commissionResultModel.percentRealtor}% </br>
-            Процент юриста: ${commissionResultModel.percentLawyer}%</br>
-        </p>
-        <p>
-            <b>Результат расчёта:</b></br>
-            Агенство (${commissionResultModel.percentAgency}%): ${commissionResultModel.rubAgency} руб. </br>
-            Агент (${commissionResultModel.percentRealtorMinusLawyer}% = ${commissionResultModel.percentRealtor}% агент - ${commissionResultModel.percentLawyer}% юрист): ${commissionResultModel.rubRealtor} руб. </br>
-            Юрист (${commissionResultModel.percentLawyer}%): ${commissionResultModel.rubLawyer} руб.
-        </p>
+        <div class="row">
+            <div class="col-12 col-12-medium">
+                <h2>Результат расчётов</h2>
+            </div>
+            <div class="col-6 col-12-medium">
+                <h2>Результат расчётов</h2>
+                <p>
+                    <b>Введенные данные:</b></br>
+                    Сумма услуг: ${commissionResultModel.price} руб. </br>
+                    Процент агента: ${commissionResultModel.percentRealtor}% </br>
+                    Процент юриста: ${commissionResultModel.percentLawyer}%</br>
+                </p>
+                <p>
+                    <b>Результат расчёта:</b></br>
+                    Агентство (${commissionResultModel.percentAgency}%): ${commissionResultModel.rubAgency} руб. </br>
+                    Агент (${commissionResultModel.percentRealtorMinusLawyer}% = ${commissionResultModel.percentRealtor}% агент - ${commissionResultModel.percentLawyer}% юрист): ${commissionResultModel.rubRealtor} руб. </br>
+                    Юрист (${commissionResultModel.percentLawyer}%): ${commissionResultModel.rubLawyer} руб.
+                </p>
+            </div>
+
+            <div class="col-6 col-12-medium">
+                <!-- Yandex.RTB R-A-2121732-3 -->
+                <div id="yandex_rtb_R-A-2121732-3"></div>
+                <script>window.yaContextCb.push(()=>{
+                    Ya.Context.AdvManager.render({
+                        renderTo: 'yandex_rtb_R-A-2121732-3',
+                        blockId: 'R-A-2121732-3'
+                    })
+                })</script>
+            </div>
+        </div>
     </section>
 </div>

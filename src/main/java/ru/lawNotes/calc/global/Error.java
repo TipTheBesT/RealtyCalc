@@ -1,4 +1,4 @@
-package ru.lawNotes.calc;
+package ru.lawNotes.calc.global;
 
 public class Error {
 

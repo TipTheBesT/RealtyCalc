@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ru.lawNotes.calc.commission.models.CommissionModel;
 import ru.lawNotes.calc.overstatement.models.OverstatementModel;
 import ru.lawNotes.calc.overstatement.models.OverstatementModelResult;
 
@@ -14,7 +13,7 @@ import java.text.DecimalFormat;
 
 @Controller
 @RequestMapping("/overstatement")
-public class Overstatement {
+public class OverstatementController {
 
     private String title = "Расчёт сумм для завышения стоимости квартиры";
     private String description = "Расчёт сумм необходимых для объявления банку и оценочной компании с учётом завышения " +

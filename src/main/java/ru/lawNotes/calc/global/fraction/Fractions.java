@@ -1,4 +1,4 @@
-package ru.lawNotes.calc.fraction;
+package ru.lawNotes.calc.global.fraction;
 
 import java.util.ArrayList;
 

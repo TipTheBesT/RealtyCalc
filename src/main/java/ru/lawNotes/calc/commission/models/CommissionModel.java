@@ -1,38 +1,42 @@
-package commission.models;
+package ru.lawNotes.calc.commission.models;
+
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Null;
+import jakarta.validation.constraints.Pattern;
 
 public class CommissionModel {
 
-    private int price;
+    private Double price = 0.0;
 
-    private double percentRealtor;
+    private Double percentRealtor = 0.0;
 
-    private double percentLawyer;
+    private Double percentLawyer = 0.0;
 
 
     public CommissionModel() {
     }
 
-    public int getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public double getPercentRealtor() {
+    public Double getPercentRealtor() {
         return percentRealtor;
     }
 
-    public void setPercentRealtor(double percentRealtor) {
+    public void setPercentRealtor(Double percentRealtor) {
         this.percentRealtor = percentRealtor;
     }
 
-    public double getPercentLawyer() {
+    public Double getPercentLawyer() {
         return percentLawyer;
     }
 
-    public void setPercentLawyer(double percentLawyer) {
+    public void setPercentLawyer(Double percentLawyer) {
         this.percentLawyer = percentLawyer;
     }
 }

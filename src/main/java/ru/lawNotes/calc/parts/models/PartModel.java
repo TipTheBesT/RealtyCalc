@@ -1,31 +1,30 @@
 package ru.lawNotes.calc.parts.models;
 
-import ru.lawNotes.calc.fraction.Fraction;
+import ru.lawNotes.calc.global.fraction.Fraction;
 
 public class PartModel {
-    private int initialObjPrice;
-    private double initialObjSquare;
-    private Fraction initialPart;
-    //initialObjPartNumerator
-    private int finalObjPrice;
-    private double finalObjSquare;
+    private Integer initialObjPrice = 0;
+    private Double initialObjSquare = 0.0;
+    private Fraction initialPart = new Fraction(0,0);
+    private Integer finalObjPrice = 0;
+    private Double finalObjSquare = 0.0;
 
     public PartModel() {
     }
 
-    public int getInitialObjPrice() {
+    public Integer getInitialObjPrice() {
         return initialObjPrice;
     }
 
-    public void setInitialObjPrice(int initialObjPrice) {
+    public void setInitialObjPrice(Integer initialObjPrice) {
         this.initialObjPrice = initialObjPrice;
     }
 
-    public double getInitialObjSquare() {
+    public Double getInitialObjSquare() {
         return initialObjSquare;
     }
 
-    public void setInitialObjSquare(double initialObjSquare) {
+    public void setInitialObjSquare(Double initialObjSquare) {
         this.initialObjSquare = initialObjSquare;
     }
 
@@ -37,19 +36,19 @@ public class PartModel {
         this.initialPart = initialPart;
     }
 
-    public int getFinalObjPrice() {
+    public Integer getFinalObjPrice() {
         return finalObjPrice;
     }
 
-    public void setFinalObjPrice(int finalObjPrice) {
+    public void setFinalObjPrice(Integer finalObjPrice) {
         this.finalObjPrice = finalObjPrice;
     }
 
-    public double getFinalObjSquare() {
+    public Double getFinalObjSquare() {
         return finalObjSquare;
     }
 
-    public void setFinalObjSquare(double finalObjSquare) {
+    public void setFinalObjSquare(Double finalObjSquare) {
         this.finalObjSquare = finalObjSquare;
     }
 }

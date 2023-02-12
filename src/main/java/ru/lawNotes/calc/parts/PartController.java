@@ -5,17 +5,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ru.lawNotes.calc.fraction.Fraction;
-import ru.lawNotes.calc.fraction.Fractions;
+import ru.lawNotes.calc.global.fraction.Fraction;
+import ru.lawNotes.calc.global.fraction.Fractions;
 import ru.lawNotes.calc.parts.models.PartModel;
 import ru.lawNotes.calc.parts.models.PartModelResult;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/part")
-public class Part {
+public class PartController {
 
     private String title = "Расчёт минимальной выделяемой доли при опекаемого";
     private String description = "Расчёт минимальной доли несовершеннолетнего или недееспособного в приобретаемом взамен объекте " +

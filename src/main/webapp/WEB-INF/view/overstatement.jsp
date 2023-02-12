@@ -1,4 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -20,13 +23,20 @@
                   <h3>Укажите данные</h3>
                   <div class="grid">
                       <%--@elvariable id="overstatement" type="java"--%>
-                      <form:form action="../overstatement/" modelAttribute="overstatement">
+                      <form action="../overstatement/" method="POST" modelAttribute="overstatement">
                           <div class="param">
                               <div class="param-title">
-                                  <h4>Реальная стоимость объекта (рубли)</h4>
+                                  <h4>Реальная стоимость<br/> объекта (рубли)</h4>
                               </div>
                               <div class="param-enter">
-                                  <form:input type="number" path="price" alt=""/>
+                                  <spring:bind path="overstatement.price">
+                                      <input placeholder="2000000"
+                                             type="number"
+                                              <core:if test="${status.value != 0}">
+                                                  value="${status.value}"
+                                              </core:if>
+                                             name="<c:out value="${status.expression}"/>" />
+                                  </spring:bind>
                               </div>
                           </div>
                           <div class="param">
@@ -34,7 +44,14 @@
                                   <h4>Необходимый ПВ (%)</h4>
                               </div>
                               <div class="param-enter">
-                                  <form:input type="number" step="0.01" path="percentInitialPaymentBank"/>
+                                  <spring:bind path="overstatement.percentInitialPaymentBank">
+                                      <input placeholder="20"
+                                             type="number"
+                                              <core:if test="${status.value != 0}">
+                                                  value="${status.value}"
+                                              </core:if>
+                                             name="<c:out value="${status.expression}"/>" />
+                                  </spring:bind>
                               </div>
                           </div>
                           <div class="param">
@@ -42,26 +59,44 @@
                                   <h4>Собственные средства (рубли)</h4>
                               </div>
                               <div class="param-enter">
-                                  <form:input  type="number" step="0.01" path="initialPaymentPerson"/>
+                                  <spring:bind path="overstatement.initialPaymentPerson">
+                                      <input placeholder="200000"
+                                             type="number"
+                                              <core:if test="${status.value != 0}">
+                                                  value="${status.value}"
+                                              </core:if>
+                                             name="<c:out value="${status.expression}"/>" />
+                                  </spring:bind>
                               </div>
                           </div>
                           <div class="param">
                               <div class="param-title">
-                                  <h4>Необходимо заложить в кредит (рубли)</h4>
+                                  <h4>Необходимо заложить<br/> в кредит (рубли)</h4>
                               </div>
                               <div class="param-enter">
-                                  <form:input  type="number" step="0.01" path="pawnCash"/>
+                                  <spring:bind path="overstatement.pawnCash">
+                                      <input placeholder="100000"
+                                             type="number"
+                                              <core:if test="${status.value != 0}">
+                                                  value="${status.value}"
+                                              </core:if>
+                                             name="<c:out value="${status.expression}"/>" />
+                                  </spring:bind>
                               </div>
+                          </div>
+
+                          <div class="errors">
+                              ${errors}
                           </div>
 
                           <div class="submit">
                               <input style="margin-top: 25px;" class="button" type="submit" value="Рассчитать"/>
                           </div>
-                      </form:form>
+                          <a href="../overstatement/" style="margin-top: 10px;" class="button alt">Очистить</a>
+                      </form>
                   </div>
               </section>
           </div>
-
       </div>
       <div class="col-8 col-12-medium imp-medium">
 

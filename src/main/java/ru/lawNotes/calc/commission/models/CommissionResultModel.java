@@ -1,38 +1,84 @@
 package ru.lawNotes.calc.commission.models;
 
-public class CommissionModel {
+public class CommissionResultModel {
 
-    private int price;
+    private String price;
 
-    private double percentRealtor;
+    private String percentAgency;
+    private String percentRealtor;
+    private String percentLawyer;
 
-    private double percentLawyer;
+    private String percentRealtorMinusLawyer;
+
+    private String rubAgency;
+    private String rubRealtor;
+    private String rubLawyer;
 
 
-    public CommissionModel() {
+    public CommissionResultModel() {
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public double getPercentRealtor() {
+    public String getPercentAgency() {
+        return percentAgency;
+    }
+
+    public void setPercentAgency(String percentAgency) {
+        this.percentAgency = percentAgency;
+    }
+
+    public String getPercentRealtor() {
         return percentRealtor;
     }
 
-    public void setPercentRealtor(double percentRealtor) {
+    public void setPercentRealtor(String percentRealtor) {
         this.percentRealtor = percentRealtor;
     }
 
-    public double getPercentLawyer() {
+    public String getPercentLawyer() {
         return percentLawyer;
     }
 
-    public void setPercentLawyer(double percentLawyer) {
+    public void setPercentLawyer(String percentLawyer) {
         this.percentLawyer = percentLawyer;
+    }
+
+    public String getPercentRealtorMinusLawyer() {
+        return percentRealtorMinusLawyer;
+    }
+
+    public void setPercentRealtorMinusLawyer(String percentRealtorMinusLawyer) {
+        this.percentRealtorMinusLawyer = percentRealtorMinusLawyer;
+    }
+
+    public String getRubAgency() {
+        return rubAgency;
+    }
+
+    public void setRubAgency(String rubAgency) {
+        this.rubAgency = rubAgency;
+    }
+
+    public String getRubRealtor() {
+        return rubRealtor;
+    }
+
+    public void setRubRealtor(String rubRealtor) {
+        this.rubRealtor = rubRealtor;
+    }
+
+    public String getRubLawyer() {
+        return rubLawyer;
+    }
+
+    public void setRubLawyer(String rubLawyer) {
+        this.rubLawyer = rubLawyer;
     }
 }
